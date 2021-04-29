@@ -34,10 +34,11 @@
           }
         },
         "serve": {
-          "builder": "@nxext/stencil:serve",
+          "builder": "@nxext/stencil:build",
           "options": {
             "projectType": "library",
-            "configPath": "libs/my-library/stencil.config.ts"
+            "configPath": "libs/my-library/stencil.config.ts",
+            "watch": true
           }
         },
         "storybook": {
