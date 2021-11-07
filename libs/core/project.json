@@ -1,0 +1,100 @@
+{
+  "root": "libs/core",
+  "sourceRoot": "libs/core/src",
+  "projectType": "library",
+  "generators": {
+    "@nxext/stencil:component": {
+      "style": "css"
+    }
+  },
+  "tags": ["scope:shared"],
+  "targets": {
+    "test": {
+      "executor": "@nxext/stencil:test",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/core/tsconfig.lib.json",
+        "configPath": "libs/core/stencil.config.ts",
+        "outputPath": "dist/libs/core"
+      }
+    },
+    "build": {
+      "executor": "@nxext/stencil:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/core/tsconfig.lib.json",
+        "configPath": "libs/core/stencil.config.ts",
+        "outputPath": "dist/libs/core"
+      },
+      "configurations": {
+        "production": {
+          "dev": false,
+          "prod": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nxext/stencil:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/core/tsconfig.lib.json",
+        "configPath": "libs/core/stencil.config.ts",
+        "outputPath": "dist/libs/core",
+        "serve": true,
+        "watch": true,
+        "open": false
+      }
+    },
+    "e2e": {
+      "executor": "@nxext/stencil:e2e",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "projectType": "library",
+        "tsConfig": "libs/core/tsconfig.lib.json",
+        "configPath": "libs/core/stencil.config.ts",
+        "outputPath": "dist/libs/core"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": "libs/core/**/*.{ts,tsx}"
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/html",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/core/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/html",
+        "outputPath": "dist/storybook/core",
+        "config": {
+          "configFolder": "libs/core/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@nxext-demo/api/account/data-access": [
+        "libs/api/account/data-access/src/index.ts"
+      ],
+      "@nxext-demo/api/account/feature": [
+        "libs/api/account/feature/src/index.ts"
+      ],
+      "@nxext-demo/api/auth/data-access": [
+        "libs/api/auth/data-access/src/index.ts"
+      ],
+      "@nxext-demo/api/auth/feature": ["libs/api/auth/feature/src/index.ts"],
+      "@nxext-demo/api/auth/util": ["libs/api/auth/util/src/index.ts"],
+      "@nxext-demo/api/core/data-access": [
+        "libs/api/core/data-access/src/index.ts"
+      ],
+      "@nxext-demo/core": ["dist/libs/core"],
+      "@nxext-demo/core-angular": ["libs/core-angular/src/index.ts"],
+      "@nxext-demo/core-react": ["libs/core-react/src/index.ts"],
+      "@nxext-demo/core/loader": ["dist/libs/core/loader"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

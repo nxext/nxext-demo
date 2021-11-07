@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "projects": {
+    "angular-client": "apps/angular-client",
+    "angular-client-e2e": "apps/angular-client-e2e",
+    "api": "apps/api",
+    "api-account-data-access": "libs/api/account/data-access",
+    "api-account-feature": "libs/api/account/feature",
+    "api-auth-data-access": "libs/api/auth/data-access",
+    "api-auth-feature": "libs/api/auth/feature",
+    "api-auth-util": "libs/api/auth/util",
+    "api-core-data-access": "libs/api/core/data-access",
+    "core": "libs/core",
+    "core-angular": "libs/core-angular",
+    "core-react": "libs/core-react"
+  }
+}

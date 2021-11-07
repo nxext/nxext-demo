@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/core-angular",
+  "sourceRoot": "libs/core-angular/src",
+  "prefix": "nxext-demo",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/core-angular"],
+      "options": {
+        "jestConfig": "libs/core-angular/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core-angular/src/**/*.ts",
+          "libs/core-angular/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:angularClient", "type:stencilLib"]
+}
