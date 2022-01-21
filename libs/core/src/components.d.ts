@@ -12,6 +12,22 @@ export namespace Components {
     }
     interface NxextLogo {
     }
+    interface SiteNavigation {
+        /**
+          * The first name
+         */
+        "first": string;
+        /**
+          * The last name
+         */
+        "last": string;
+        /**
+          * The middle name
+         */
+        "middle": string;
+    }
+    interface UserHome {
+    }
     interface UserList {
         "users": User[];
     }
@@ -29,6 +45,18 @@ declare global {
         prototype: HTMLNxextLogoElement;
         new (): HTMLNxextLogoElement;
     };
+    interface HTMLSiteNavigationElement extends Components.SiteNavigation, HTMLStencilElement {
+    }
+    var HTMLSiteNavigationElement: {
+        prototype: HTMLSiteNavigationElement;
+        new (): HTMLSiteNavigationElement;
+    };
+    interface HTMLUserHomeElement extends Components.UserHome, HTMLStencilElement {
+    }
+    var HTMLUserHomeElement: {
+        prototype: HTMLUserHomeElement;
+        new (): HTMLUserHomeElement;
+    };
     interface HTMLUserListElement extends Components.UserList, HTMLStencilElement {
     }
     var HTMLUserListElement: {
@@ -38,6 +66,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "login-form": HTMLLoginFormElement;
         "nxext-logo": HTMLNxextLogoElement;
+        "site-navigation": HTMLSiteNavigationElement;
+        "user-home": HTMLUserHomeElement;
         "user-list": HTMLUserListElement;
     }
 }
@@ -47,12 +77,30 @@ declare namespace LocalJSX {
     }
     interface NxextLogo {
     }
+    interface SiteNavigation {
+        /**
+          * The first name
+         */
+        "first"?: string;
+        /**
+          * The last name
+         */
+        "last"?: string;
+        /**
+          * The middle name
+         */
+        "middle"?: string;
+    }
+    interface UserHome {
+    }
     interface UserList {
         "users"?: User[];
     }
     interface IntrinsicElements {
         "login-form": LoginForm;
         "nxext-logo": NxextLogo;
+        "site-navigation": SiteNavigation;
+        "user-home": UserHome;
         "user-list": UserList;
     }
 }
@@ -62,6 +110,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "login-form": LocalJSX.LoginForm & JSXBase.HTMLAttributes<HTMLLoginFormElement>;
             "nxext-logo": LocalJSX.NxextLogo & JSXBase.HTMLAttributes<HTMLNxextLogoElement>;
+            "site-navigation": LocalJSX.SiteNavigation & JSXBase.HTMLAttributes<HTMLSiteNavigationElement>;
+            "user-home": LocalJSX.UserHome & JSXBase.HTMLAttributes<HTMLUserHomeElement>;
             "user-list": LocalJSX.UserList & JSXBase.HTMLAttributes<HTMLUserListElement>;
         }
     }

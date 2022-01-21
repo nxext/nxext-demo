@@ -7,6 +7,6 @@ import { Component, getAssetPath, h } from '@stencil/core';
 })
 export class NxextLogo {
   render() {
-    return <img class="object-contain h-16 w-full" src={getAssetPath('./assets/logo-dark.png')} />;
+    return <img class="object-contain h-8 w-full" src={getAssetPath('./assets/logo-dark.png')} />;
   }
 }

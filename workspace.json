@@ -11,7 +11,6 @@
     "api-auth-util": "libs/api/auth/util",
     "api-core-data-access": "libs/api/core/data-access",
     "core": "libs/core",
-    "core-angular": "libs/core-angular",
-    "core-react": "libs/core-react"
+    "core-angular": "libs/core-angular"
   }
 }

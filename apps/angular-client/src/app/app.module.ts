@@ -10,14 +10,18 @@ import { AuthHeaderInterceptor } from './auth-header.interceptor';
 import { UserListComponent } from './user-list/user-list.component';
 import { LoginComponent } from './login/login.component';
 import { IsLoggedinGuard } from './is-loggedin.guard';
+import { HomeComponent } from './home/home.component';
+import { PageLayoutComponent } from './page-layout/page-layout.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'user-list', component: UserListComponent, canActivate: [IsLoggedinGuard] }
 ];
 
+
 @NgModule({
-  declarations: [AppComponent, UserListComponent, LoginComponent],
+  declarations: [AppComponent, UserListComponent, LoginComponent, HomeComponent, PageLayoutComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),

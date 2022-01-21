@@ -2,9 +2,7 @@ import { Component, Event, EventEmitter, h, State } from '@stencil/core';
 import { LoginData } from './login-form-data';
 
 @Component({
-  tag: 'login-form',
-  styleUrl: 'login-form.css',
-  shadow: true,
+  tag: 'login-form'
 })
 export class LoginForm {
 
