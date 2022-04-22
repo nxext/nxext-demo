@@ -13,14 +13,16 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader',
-      dir: '../../dist/libs/core/dist'
+      esmLoaderPath: '../loader'
     },
     angularOutputTarget({
       componentCorePackage: '@nxext-demo/core',
       directivesProxyFile:
         '../../../libs/core-angular/src/generated/directives/proxies.ts',
       valueAccessorConfigs: angularValueAccessorBindings
-    })
+    }),
+    {
+      type: 'dist-custom-elements'
+    },
   ]
 };
