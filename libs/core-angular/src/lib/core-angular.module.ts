@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginForm, NxextLogo, UserList } from '../generated/directives/proxies';
+import { DIRECTIVES } from '../generated/directives';
 
-const DECLARATIONS = [
-  LoginForm,
-  NxextLogo,
-  UserList
-];
 
 @NgModule({
-  declarations: DECLARATIONS,
-  exports: DECLARATIONS,
+  declarations: DIRECTIVES,
+  exports: DIRECTIVES,
   imports: [CommonModule],
 })
 export class CoreAngularModule {}

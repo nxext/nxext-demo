@@ -19,6 +19,8 @@ export const config: Config = {
       componentCorePackage: '@nxext-demo/core',
       directivesProxyFile:
         '../../../libs/core-angular/src/generated/directives/proxies.ts',
+      directivesArrayFile:
+        '../../../libs/core-angular/src/generated/directives/index.ts',
       valueAccessorConfigs: angularValueAccessorBindings
     }),
     {
